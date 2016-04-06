@@ -1,0 +1,42 @@
+﻿@model WebApplication.Models.User
+ 
+@{
+    ViewBag.Title = "UserSubscriber";
+    Layout = "~/Views/Shared/_Layout.cshtml";     
+}
+ 
+ 
+<div class="otherContent">
+
+    @using (Html.BeginForm("UserSubscriber", "Home"))
+    {
+        
+  
+
+
+        @Html.Label("Имя пользователя\t");
+        @Html.TextBoxFor(x => x.LastName);
+
+             <br>
+             @Html.Label("Фамилия пользователя ");
+             @Html.TextBoxFor(x => x.FirstName);
+
+             <br>
+             @Html.Label("Email пользователя   ");
+            @Html.TextBoxFor(x => x.EmailAddres);
+
+
+         <input type="submit" value="Send" />
+
+
+        //  <p>@ViewBag.Message</p>
+    }
+
+
+</div>
+
+
+ 
+
+
+ 

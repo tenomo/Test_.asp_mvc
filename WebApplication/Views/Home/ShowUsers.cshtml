@@ -1,0 +1,39 @@
+﻿@model WebApplication.Models.UsersDate
+ 
+ 
+@{
+ 
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="otherContent">
+    
+
+   
+
+    @using (Html.BeginForm("ShowUsers", "Home"))
+    {
+        <input type="submit" value="Send" />
+
+        foreach (var item in WebApplication.Controllers.HomeController.userData.Users)
+        {
+            <div class="item">
+                <span class="id">
+                    @item;
+                </span>
+            </div>
+        }
+
+        <input type="submit" value="Send" />
+    }
+
+
+</div>
+
+
+
+
+
+
+
